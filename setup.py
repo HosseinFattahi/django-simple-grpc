@@ -5,26 +5,23 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="django-simple-grpc",
-    version="0.0.1",
+    version="0.1.0",
     author="HF",
     author_email="hofattahi98@gmail.com",
     description="Simplify gRPC server and client usage in Django apps.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/HosseinFattahi/django-simple-grpc",  
+    url="https://github.com/HosseinFattahi/django-simple-grpc",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        "Django==5.1.7",
+        "Django>=3.2",
         "grpcio==1.71.0",
         "grpcio-tools==1.71.0",
-        "protobuf==5.29.4",
-        "asgiref==3.8.1",
-        "sqlparse==0.5.3",
-        "setuptools>=77.0.0"
+        "protobuf==5.29.4"
     ],
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Topic :: Internet :: WWW/HTTP",
         "Framework :: Django",
