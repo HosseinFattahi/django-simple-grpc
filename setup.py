@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="django-simple-grpc",
-    version="0.1.0",
+    version="0.1.1",
     author="HF",
     author_email="hofattahi98@gmail.com",
     description="Simplify gRPC server and client usage in Django apps.",
