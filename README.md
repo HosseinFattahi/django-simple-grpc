@@ -21,30 +21,3 @@ It supports both server and client code, and includes powerful Django management
 
 ```bash
 pip install django-simple-grpc
-
-⚙️ Setup in Django
-
-Add to your `settings.py`:
-
-```python
-INSTALLED_APPS = [
-    ...
-    "django_simple_grpc",
-]
-
-Then add the gRPC configuration:
-
-```python
-GRPC_SERVER_PORT = 50051
-GRPC_SERVER_ADDRESS = "localhost:50051"
-
-# Replace <your_app> and <YourServiceName> with your actual values
-GRPC_SERVICE_REGISTER = "grpc_generated.<your_app>_pb2_grpc.add_<YourServiceName>Servicer_to_server"
-GRPC_SERVICE_IMPL = "<your_app>.grpc_service.<YourServiceName>Servicer"
-
-
-🔁 Example if your app is called store and your service is ProductService:
-
-```python
-GRPC_SERVICE_REGISTER = "grpc_generated.store_pb2_grpc.add_ProductServiceServicer_to_server"
-GRPC_SERVICE_IMPL = "store.grpc_service.ProductServiceServicer"
